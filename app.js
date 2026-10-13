@@ -17,6 +17,10 @@ app.use(express.urlencoded({ extended: true }));
 // Mise à disposition des fichiers publics
 app.use(express.static('public'));
 
+console.log(
+  "SESSION_SECRET présente :",
+  Boolean(process.env.SESSION_SECRET)
+);
 // Configuration des sessions
 app.use(
   session({
