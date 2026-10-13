@@ -17,10 +17,13 @@ app.use(express.urlencoded({ extended: true }));
 // Mise à disposition des fichiers publics
 app.use(express.static('public'));
 
-console.log(
-  "SESSION_SECRET présente :",
-  Boolean(process.env.SESSION_SECRET)
-);
+console.log("Diagnostic configuration :", {
+  nodeEnv: process.env.NODE_ENV,
+  sessionSecretDefined: typeof process.env.SESSION_SECRET !== "undefined",
+  sessionSecretNonEmpty: Boolean(process.env.SESSION_SECRET),
+  mongodbUriDefined: Boolean(process.env.MONGODB_URI)
+});
+
 // Configuration des sessions
 app.use(
   session({
