@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord - Port Russell</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/dashboard.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Port de Plaisance Russell</h1>
+    <p>Tableau de bord</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Bienvenue</h2>
+
+      <p>Utilisateur : <strong id="username">Chargement...</strong></p>
+      <p>E-mail : <strong id="userEmail">Chargement...</strong></p>
+      <p>Date du jour : <strong id="currentDate"></strong></p>
+
+      <h2>Réservations en cours</h2>
+      <p id="reservationMessage">Chargement des réservations...</p>
+
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Catway</th>
+              <th>Client</th>
+              <th>Bateau</th>
+              <th>Début</th>
+              <th>Fin</th>
+            </tr>
+          </thead>
+          <tbody id="reservationsTable"></tbody>
+        </table>
+      </div>
+
+    <nav>
+      <a href="/catways.html">Gestion des catways</a>
+      <a href="/reservations.html">Gestion des réservations</a>
+      <a href="/users.html">Gestion des utilisateurs</a>
+      <a href="/api-docs.html">Documentation de l'API</a>
+      <a href="/logout">Déconnexion</a>
+    </nav>
+    </section>
+  </main>
+</body>
+</html>

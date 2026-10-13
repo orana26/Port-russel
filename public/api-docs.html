@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation API - Port Russell</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Documentation de l'API</h1>
+    <p>API REST du port de plaisance Russell, développée avec Node.js,
+    Express et MongoDB.</p>
+
+    <p><a href="/dashboard">← Retour au tableau de bord</a></p>
+
+    <section>
+      <h2>Authentification</h2>
+      <ul>
+        <li><code>POST /login</code> : se connecter.</li>
+        <li><code>POST /register</code> : créer un compte.</li>
+        <li><code>GET /logout</code> : se déconnecter.</li>
+        <li><code>GET /me</code> : consulter la session courante.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Catways</h2>
+      <ul>
+        <li><code>GET /catways</code> : lister les catways.</li>
+        <li><code>GET /catways/:id</code> : consulter un catway.</li>
+        <li><code>POST /catways</code> : ajouter un catway.</li>
+        <li><code>PUT /catways/:id</code> : modifier l'état d'un catway.</li>
+        <li><code>DELETE /catways/:id</code> : supprimer un catway.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Réservations</h2>
+      <ul>
+        <li><code>GET /catways/:id/reservations</code> : lister les réservations d'un catway.</li>
+        <li><code>GET /catways/:id/reservations/:idReservation</code> : consulter une réservation.</li>
+        <li><code>POST /catways/:id/reservations</code> : ajouter une réservation.</li>
+        <li><code>PUT /catways/:id/reservations/:idReservation</code> : modifier une réservation.</li>
+        <li><code>DELETE /catways/:id/reservations/:idReservation</code> : supprimer une réservation.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Utilisateurs</h2>
+      <ul>
+        <li><code>GET /users</code> : lister les utilisateurs sans leurs mots de passe.</li>
+        <li><code>GET /users/:email</code> : consulter un utilisateur par e-mail.</li>
+        <li><code>POST /users</code> : créer un utilisateur.</li>
+        <li><code>PUT /users/:email</code> : modifier un utilisateur.</li>
+        <li><code>DELETE /users/:email</code> : supprimer un utilisateur.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Utilisation</h2>
+      <p>Base URL en local : <code>http://localhost:3000</code></p>
+      <p>Les routes de gestion nécessitent une session authentifiée.
+      Connectez-vous d'abord pour les utiliser.</p>
+      <p>Les données envoyées par les requêtes POST et PUT sont au format JSON.</p>
+    </section>
+  </main>
+</body>
+</html>

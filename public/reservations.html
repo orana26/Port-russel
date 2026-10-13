@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des réservations - Port Russell</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Gestion des réservations</h1>
+    <p>Consultez et gérez les réservations du port.</p>
+
+    <p><a href="/dashboard">← Retour au tableau de bord</a></p>
+
+    <p id="message" role="status"></p>
+
+    <section>
+      <h2>Ajouter une réservation</h2>
+
+      <form id="reservationForm">
+        <label for="catwayNumber">Numéro du catway</label>
+        <input type="number" id="catwayNumber" min="1" required>
+
+        <label for="clientName">Nom du client</label>
+        <input type="text" id="clientName" required>
+
+        <label for="boatName">Nom du bateau</label>
+        <input type="text" id="boatName" required>
+
+        <label for="startDate">Date de début</label>
+        <input type="datetime-local" id="startDate" required>
+
+        <label for="endDate">Date de fin</label>
+        <input type="datetime-local" id="endDate" required>
+
+        <button type="submit">Ajouter la réservation</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Rechercher les réservations d’un catway</h2>
+
+      <form id="searchForm">
+        <label for="searchCatway">Numéro du catway</label>
+        <input type="number" id="searchCatway" min="1" required>
+        <button type="submit">Afficher les réservations</button>
+        <button type="button" id="showAll">Afficher toutes les réservations</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Liste des réservations</h2>
+
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Catway</th>
+              <th>Client</th>
+              <th>Bateau</th>
+              <th>Début</th>
+              <th>Fin</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="reservationsList">
+            <tr><td colspan="6">Chargement...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/reservations.js"></script>
+</body>
+</html>

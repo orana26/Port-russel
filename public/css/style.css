@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f5f8;
+  color: #243746;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #123b52;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+header h1 {
+  margin: 0 0 10px;
+}
+
+header p {
+  margin: 0;
+}
+
+main {
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  margin-top: 0;
+  color: #123b52;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bdcbd3;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid #287da1;
+  border-color: transparent;
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #176b87;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #104e65;
+}
+
+#loginMessage {
+  margin-bottom: 0;
+  color: #b42318;
+}
+
+main > p {
+  text-align: center;
+  margin-top: 25px;
+}
+
+a {
+  color: #176b87;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #536875;
+}

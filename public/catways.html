@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des catways - Port de plaisance Russell</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Gestion des catways</h1>
+    <p>Consultez et gérez les catways du port.</p>
+
+    <p>
+      <a href="/dashboard">← Retour au tableau de bord</a>
+    </p>
+
+    <p id="message" role="status"></p>
+
+    <section>
+      <h2>Ajouter un catway</h2>
+
+      <form id="catwayForm">
+        <label for="catwayNumber">Numéro du catway</label>
+        <input type="number" id="catwayNumber" min="1" required>
+
+        <label for="catwayType">Type</label>
+        <select id="catwayType" required>
+          <option value="short">Court</option>
+          <option value="long">Long</option>
+        </select>
+
+        <label for="catwayState">État</label>
+        <textarea id="catwayState" required></textarea>
+
+        <button type="submit">Ajouter le catway</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Liste des catways</h2>
+
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Numéro</th>
+              <th>Type</th>
+              <th>État</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="catwaysList">
+            <tr>
+              <td colspan="4">Chargement des catways...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/catways.js"></script>
+</body>
+</html>
