@@ -127,8 +127,6 @@ exports.logout = (req, res) => {
   sameSite: 'lax'
 });
 
-    return res.status(200).json({
-      message: 'Déconnexion réussie.'
-    });
+    return res.redirect('/');
   });
 };
